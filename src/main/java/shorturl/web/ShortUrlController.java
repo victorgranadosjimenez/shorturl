@@ -19,15 +19,18 @@ public class ShortUrlController {
 
     // POST para crear un short URL
     @PostMapping("/api/shorten")
-    public ResponseEntity<String> shortenUrl(@RequestParam String url, HttpServletRequest request) {
+    public ResponseEntity<String> shortenUrl(@RequestParam String url) {
         ShortUrl shortUrl = service.createShortUrl(url);
 
-        // Construye la URL base automáticamente según el dominio real (Render)
-        String baseUrl = request.getRequestURL().toString().replace(request.getRequestURI(), "");
-        String shortLink = baseUrl + "/" + shortUrl.getId(); // GET queda sin /api
+        // Usando tu dominio
+        String shortLink = "https://victorgranados.com/shorturl/" + shortUrl.getId();
 
         return ResponseEntity.ok(shortLink);
     }
+
+
+
+
 
     // GET para redirigir desde el short URL
     @GetMapping("/{id}")
