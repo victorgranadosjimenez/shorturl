@@ -1,15 +1,9 @@
-# 🔍 App Search Engine 
-
-
+# 🔍 App Short URL
 ![Imagen del proyecto](https://raw.githubusercontent.com/victorgranadosjimenez/shorturl/refs/heads/master/Captura.JPG?raw=true)
-
-
 
 
 ## Ejemplo en vivo
 https://victorgranados.com/shorturl/
-
-
 
 
 ## Descripción 📑
