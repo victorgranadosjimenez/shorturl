@@ -18,7 +18,7 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copiamos el JAR construido
-COPY --from=build /app/target/searchEngine-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/shorturl-0.0.1-SNAPSHOT.jar app.jar
 
 # Exponemos el puerto de Spring Boot
 EXPOSE 8080
