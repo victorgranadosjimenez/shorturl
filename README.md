@@ -54,14 +54,14 @@ Esto permite mantener el código organizado, fácil de probar y de escalar.
 Las capas principales son:
 1. 🧩 Domain (Dominio) : Contiene la lógica de negocio pura, sin depender de frameworks.
    
-*ShortUrl* → modelo del dominio con los datos esenciales (id, originalUrl, createdAt, visits).
-ShortUrlRepositoryPort → interfaz que define las operaciones que el dominio necesita (guardar, buscar por ID).
+- ShortUrl → modelo del dominio con los datos esenciales (id, originalUrl, createdAt, visits).
+- ShortUrlRepositoryPort → interfaz que define las operaciones que el dominio necesita (guardar, buscar por ID).
 
 3. 🧠 Application (Aplicación / Servicio)
 Orquesta la lógica del dominio y coordina las acciones del sistema.
 Esta capa usa el repositorio definido en el dominio, pero no sabe cómo se implementa (base de datos, memoria, etc.).
 
-ShortUrlService  →
+- ShortUrlService  →
 Generar un ID corto aleatorio (generateShortId()).
 Crear y guardar un nuevo ShortUrl.
 Buscar URLs originales para redirigir.
