@@ -2,6 +2,7 @@ package shorturl.web;
 
 
 
+import jakarta.servlet.http.HttpServletRequest;
 import shorturl.application.service.ShortUrlService;
 import shorturl.domain.model.ShortUrl;
 import org.springframework.http.ResponseEntity;
@@ -20,10 +21,16 @@ public class ShortUrlController {
     }
 
     @PostMapping("/shorten")
-    public ResponseEntity<String> shorten(@RequestParam String url) {
+    public ResponseEntity<String> shortenUrl(@RequestParam String url, HttpServletRequest request) {
         ShortUrl shortUrl = service.createShortUrl(url);
-        return ResponseEntity.ok("http://localhost:8080/" + shortUrl.getId());
+
+        // Construye la URL base automáticamente según el dominio real (Render)
+        String baseUrl = request.getRequestURL().toString().replace(request.getRequestURI(), "");
+        String shortLink = baseUrl + "/" + shortUrl.getId();
+
+        return ResponseEntity.ok(shortLink);
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<?> redirect(@PathVariable String id) {
