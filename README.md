@@ -119,7 +119,7 @@ http://localhost:8080/api/documents
 Si quieres hechas un vistazo al proyecto, te recomiendo:
 
 ![Imagen del proyecto](https://raw.githubusercontent.com/victorgranadosjimenez/shorturl/refs/heads/master/Captura.JPG?raw=true)
-![Imagen del proyecto](https://raw.githubusercontent.com/victorgranadosjimenez/shorturl/refs/heads/master/Captura2.PNG?raw=true)
+![Imagen del proyecto](https://raw.githubusercontent.com/victorgranadosjimenez/shorturl/refs/heads/master/Captura2.jpg?raw=true)
 
 
 
